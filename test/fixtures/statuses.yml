@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  neha: MyText
+  gagan: MyText
+  shelley: MyText
+  pratima: MyText
+  jyoti: MyText
+  abhinav: MyText
+
+two:
+  neha: MyText
+  gagan: MyText
+  shelley: MyText
+  pratima: MyText
+  jyoti: MyText
+  abhinav: MyText

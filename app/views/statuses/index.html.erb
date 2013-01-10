@@ -1,0 +1,33 @@
+<h1>Listing statuses</h1>
+
+<table>
+  <tr>
+    <th>Neha</th>
+    <th>Gagan</th>
+    <th>Shelley</th>
+    <th>Pratima</th>
+    <th>Jyoti</th>
+    <th>Abhinav</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @statuses.each do |status| %>
+  <tr>
+    <td><%= status.neha %></td>
+    <td><%= status.gagan %></td>
+    <td><%= status.shelley %></td>
+    <td><%= status.pratima %></td>
+    <td><%= status.jyoti %></td>
+    <td><%= status.abhinav %></td>
+    <td><%= link_to 'Show', status %></td>
+    <td><%= link_to 'Edit', edit_status_path(status) %></td>
+    <td><%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Status', new_status_path %>
