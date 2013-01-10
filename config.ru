@@ -2,3 +2,4 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run Statusmail::Application
+set :url, 'http://mighty-beach-5735.herokuapp.com/'
