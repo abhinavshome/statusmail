@@ -1,38 +1,40 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'rails', '3.2.10'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'pg'
-
+gem 'rails', '3.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
+gem 'haml'
+gem 'sass'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
+# Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+group :production do
+	gem 'therubyracer-heroku'
+	gem 'pg'
+end
 
-# To use debugger
-# gem 'debugger'
+group :development, :test do
+	gem 'ruby-debug19', :require => 'ruby-debug'
+	gem 'sqlite3'
+	gem 'thin'
+end
+
+group :test do
+	gem 'autotest'	
+	gem 'autotest-growl'
+	gem 'rcov' 
+	gem 'httparty'	
+	gem 'rspec', '>= 2.6'
+	gem 'rspec-rails', '>= 2.6'
+	gem 'factory_girl', :git => 'git://github.com/thoughtbot/factory_girl.git', :tag => 'v2.1.2'
+	gem 'factory_girl_rails', :git => 'git://github.com/thoughtbot/factory_girl_rails.git', :tag => 'v1.2.0'
+end
